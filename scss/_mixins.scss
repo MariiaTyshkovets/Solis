@@ -1,0 +1,75 @@
+@mixin phone {
+    @media (max-width: $phone-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin btn {
+    color: $button-color;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    background-color: rgba($color: $background-color, $alpha: 0);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position: relative;
+
+    &::before {
+        height: 13px;
+        width: calc(100% - 12px);
+        position: absolute;
+        content: " ";
+        left: 15px;
+        top: 12px;
+        background-color: $button-color;
+        border: 1px solid;
+        opacity: 30%;
+    }
+}
+
+@mixin dollar {
+    &::before {
+        content: "$";
+        font-size: $heading-3-font-size;
+        line-height: 1;
+        color: $primary-color-gray;
+
+        @include tablet {
+            font-size: 26px;
+        }
+
+        @include phone {
+            font-size: $heading-5-font-size;
+        }
+    }
+}
+
+@mixin hr-default {
+    height: 1px;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    margin: 0;
+}
+
+@mixin cards-input {
+        border-radius: 4px;
+        color: $primary-color-white;
+        opacity: 0.8;
+        background-color: rgba(256, 256, 256, 0.1);
+        border: none;
+}

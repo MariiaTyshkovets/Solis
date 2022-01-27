@@ -1,0 +1,119 @@
+.footer {
+    hr {
+        @include hr-default;
+        color: $primary-color-gray;
+        background-color: $primary-color-gray;
+
+        .dark & {
+            color: $hr-color;
+            background-color: $hr-color;
+        }
+    } 
+}
+
+.footer__contacts {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include phone {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    article, form {
+        max-width: 500px;
+    }
+
+    article {
+        margin-right: 20px;
+
+        @include phone {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.request {
+    width: 40%;
+    min-width: 250px;
+
+    @include phone {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        letter-spacing: 0.9px;
+        border: none;
+        padding: 10px;
+        font-style: italic;
+        outline: none;
+        font-family: 'Playfair Display', sans-serif;
+        
+        &::placeholder {
+            color: $primary-color;
+            opacity: 0.6;
+        }
+
+        .dark & {
+            background-color: $background-color !important;
+            color: $primary-color !important;
+        }
+    }
+
+    hr {
+        color: $primary-color;
+        background-color: $primary-color;
+        opacity: 0.1;
+        margin-bottom: 30px;
+
+        @include phone {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.footer__bottom {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $additional-font-size;
+    line-height: $additional-line-height;
+    letter-spacing: 0.8px;
+
+    @include phone {
+        justify-content: space-evenly;
+        height: 60px;
+    }
+
+    > span {
+        margin-right: 10px;
+    }
+
+    span {
+        opacity: 0.6;
+    }
+
+    a {
+        margin-right: 10px;
+
+        @include phone {
+            display: none;
+        }
+    }
+}
+
+.made-by {
+    flex: 1;
+    text-align: center;
+
+    @include phone {
+        display: none;
+    }
+}

@@ -1,0 +1,35 @@
+.main__banner {
+    height: 100vh;
+    padding-top: 121px;
+
+    h2, p {
+        max-width: 560px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 48px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.home-page {
+    height: calc(100vh - 121px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.button {
+    @include btn;
+}

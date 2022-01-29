@@ -35,7 +35,6 @@
             width: 35px;
             height: 22px;
             position: absolute;
-            z-index: 1;
             cursor: pointer;
             opacity: 0; /* hide this */
             z-index: 2; /* and place it over the hamburger */
@@ -114,7 +113,7 @@
 
         .nav-list__item {
             height: 100%;
-            padding: 0 5px;
+            padding: 0 10px;
             margin-left: 0;
 
             a {
@@ -127,7 +126,9 @@
 }
 
 .header__logo {
+    padding: 5px 10px;
     min-width: 108px;
+    @include hover;
 }
 
 .header__nav {
@@ -146,7 +147,9 @@
 }
 
 .nav-list__item {
-    margin-left: 32px;
+    margin-left: 12px;
+    padding: 5px 10px;
+    @include hover;
 }
 
 .header__icon {

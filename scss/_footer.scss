@@ -86,7 +86,7 @@
     font-size: $additional-font-size;
     line-height: $additional-line-height;
     letter-spacing: 0.8px;
-
+    
     @include phone {
         justify-content: space-evenly;
         height: 60px;
@@ -106,12 +106,26 @@
         @include phone {
             display: none;
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    > a {
+        @include tablet {
+            display: none;
+        }
     }
 }
 
 .made-by {
     flex: 1;
     text-align: center;
+
+    @include tablet {
+        text-align: right;
+    }
 
     @include phone {
         display: none;

@@ -12,7 +12,6 @@ body {
         background-color: $background-color;
 
         @include tablet {
-            background: cover;
             background-size: auto 100vh;
         }
 
@@ -23,7 +22,7 @@ body {
     } 
 
     @include tablet {
-        background-size: auto 100vh cover;
+        background-size: auto 100vh;
     }
 
     @include phone {

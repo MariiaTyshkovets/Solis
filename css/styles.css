@@ -971,7 +971,7 @@ p {
   background-color: #eee;
 }
 .exchange-wallet__container input:checked ~ .checkmark {
-  background: url("/svg/Ellipse37.svg");
+  background: url("../svg/Ellipse37.svg");
 }
 .exchange-wallet__container .checkmark:after {
   content: "";

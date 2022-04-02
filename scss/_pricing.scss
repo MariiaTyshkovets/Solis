@@ -1,0 +1,253 @@
+.pricing {
+    background: url(../img/features-background-image.png) no-repeat top left;
+    margin-bottom: 150px;
+    padding: 44px 0 44px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+        padding: 12px 0 12px 12px;
+    }
+
+    @include phone {
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 12px;
+        margin-bottom: 60px;
+    }
+}
+
+.pricing__card {
+    margin: 30px 0;
+    height: 330px;
+    min-width: 240px;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: $background-color;
+    filter: drop-shadow(0 0 10px $background-color);
+    color: $primary-color-white;
+    font-size: $additional-font-size;
+    line-height: $additional-line-height;
+    margin-right: 10px;
+
+    span {
+        margin-right: 6px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    hr {
+        @include hr-default;
+        background-color: $primary-color-white;
+        opacity: 0.1;
+        margin-bottom: 10px;
+    }
+}
+
+.top-of-the-card {
+    display: flex; 
+    margin-bottom: 16px;   
+}
+
+.top-of-the-card__arrow {
+    margin: 0 15px;
+}
+
+.rate {
+
+    h6 {
+        margin-bottom: 9px;
+    }
+
+    p {
+        font-style: italic;
+        font-size: $heading-5-font-size;
+        line-height: $additional-line-height;
+        font-weight: 500;
+        letter-spacing: 2px;
+        opacity: 0.9;
+        margin: 0 0 13px 10px;
+        position: relative;
+    
+        &::after {
+            position: absolute;
+            content: "49";
+            font-size: 56px;
+            font-weight: 700;
+            font-style: normal;
+            bottom: 12px;
+        }
+    }
+}
+
+.pay-receive {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.pay-receive__input {
+    position: relative;
+
+    input {
+        @include cards-input;
+        max-width: 94px;
+        padding: 2px 30px 2px 10px;
+    }
+
+    object {
+        position: absolute;
+        right: 5px;
+        top: calc(50% - 9px);
+        opacity: 20%;
+    }
+
+    input:focus + object {
+        opacity: 1;
+    }
+}
+
+.fees {
+    margin-bottom: 16px;
+}
+
+.fees__item {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        @include cards-input;
+        width: 57px;
+        height: 17px;
+    }
+}
+
+.exchange-wallet {
+    display: flex;
+    justify-content: space-between;
+    font-size: $heading-6-font-size;
+    line-height: $heading-6-line-height;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.exchange-wallet__container {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.3;
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 2.75px;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: $background-color;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:hover input ~ .checkmark {
+        background-color: #eee;
+    }
+
+    input:checked ~ .checkmark {
+        background: url("../svg/Ellipse37.svg");
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+        opacity: 1;
+    }
+
+    .checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: $primary-color-white;
+    }
+}
+
+.pricing-arguments {
+    display: grid;
+    padding: 60px 50px;
+    grid-template-columns: 55% 1fr;
+    row-gap: 40px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 760px;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 0;
+    }
+
+    @include phone {
+        padding: 12px;
+    }
+
+    .dark & {
+        background-color: rgba(22, 25, 38, 0.9);  
+    }
+
+    h4 {
+        margin-bottom: 14px;
+    }
+
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+.pricing-arguments__item {
+    padding: 0 10px;
+}
+
+.pricing-arguments__button {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 30px 0 34px;
+    border: 1px solid $primary-color-gray;
+
+    .dark & {
+        border: 1px solid $hr-color;
+
+        @include tablet {
+            border: none;
+        }
+    }
+
+    @include tablet {
+        border: none;
+    }
+}

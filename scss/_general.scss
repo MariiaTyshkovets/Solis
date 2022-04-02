@@ -1,0 +1,119 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: $primary-font-size;
+    line-height: $primary-line-height;
+    background: url(../img/first-screen-image.png) no-repeat center top;
+    background-size: 100% auto;
+    color: $primary-color;
+
+    &.dark {
+        background: url(../img/first-screen-image-dark.png) no-repeat center top;
+        background-size: 100% auto;
+        background-color: $background-color;
+
+        @include tablet {
+            background-size: auto 100vh;
+        }
+
+        @include phone {
+            background: none;
+            background-color: $background-color;
+        }
+    } 
+
+    @include tablet {
+        background-size: auto 100vh;
+    }
+
+    @include phone {
+        background: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', sans-serif;
+    color: $primary-color;
+}
+
+h1 {
+    font-size: $heading-1-font-size;
+    line-height: $heading-1-line-height;
+
+    @include tablet {
+        font-size: $heading-2-font-size;
+        line-height: $heading-2-line-height; 
+    }
+}
+
+h2 {
+    font-size: $heading-2-font-size;
+    line-height: $heading-2-line-height;
+
+    @include tablet {
+        font-size: $heading-3-font-size;
+        line-height: $heading-3-line-height;
+    }
+}
+
+h3 {
+    font-size: $heading-3-font-size;
+    line-height: $heading-3-line-height;
+
+    @include tablet {
+        font-size: $heading-4-font-size;
+        line-height: $heading-4-line-height;
+    }
+}
+
+h4 {
+    font-size: $heading-4-font-size;
+    line-height: $heading-4-line-height;
+}
+
+h5 {
+    font-size: $heading-5-font-size;
+    line-height: $heading-5-line-height;
+}
+
+h6 {
+    font-size: $heading-6-font-size;
+    line-height: $heading-6-line-height;
+    opacity: 0.3;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+em {
+    font-style: italic;
+    color: $secondary-color-blue;
+}
+
+p {
+    opacity: 80%; 
+    font-weight: 300;
+}
+
+.wrapper {
+    margin: 0 64px;
+
+    @include tablet {
+        margin: 0 30px;
+    }
+
+    @include phone {
+        margin: 0 15px;
+    }
+}
+
+.main {
+    margin-top: -80px;
+
+    @include tablet {
+        margin-top: -60px;
+    }
+}

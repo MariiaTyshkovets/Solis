@@ -1,0 +1,100 @@
+.main__about {
+    background: url(../img/statistic-image.png) no-repeat left center;
+    background-size: auto 95%;  
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about-article {
+    max-width: 800px;
+    min-height: 70vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+
+    .dark & {
+        background-color: rgba(22, 25, 38, 0.9);
+    }
+
+    @include phone {
+        flex-direction: column;
+    }
+}
+
+.about-article__price {
+    flex: 1;
+    padding: 42px 12px;
+
+    @include phone {
+        padding-bottom: 12px;
+    }
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    hr {
+        @include hr-default;
+        color: $secondary-color-blue;
+        background-color: $secondary-color-blue;
+        width: 82px;
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    @include phone {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.price__item {
+    h1 {
+        margin-bottom: 10px;
+
+        @include phone {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    } 
+
+    p {
+        margin-bottom: 20px;
+
+        @include phone {
+            font-size: $additional-font-size;
+            line-height: $additional-line-height;
+        }
+    }
+}
+
+.price__item:nth-child(1), .price__item:nth-child(3) {
+    h1 {
+        @include dollar;
+    }
+}
+
+.about-article__text {
+    flex: 1;
+    padding: 52px 12px;
+
+    @include phone {
+        padding: 32px 12px;
+    }
+
+    p {
+        margin-bottom: 32px;
+
+        &:nth-child(2) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
